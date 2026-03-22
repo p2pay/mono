@@ -13,6 +13,7 @@
     "nuxt": "^4.0.0",
     "@p2payto/mono": "workspace:*",
     "@p2payto/template": "workspace:*",
-    "@p2payto/peach": "workspace:*"
+    "@p2payto/peach": "workspace:*",
+    "@p2payto/booking-flow": "workspace:*"
   }
 }

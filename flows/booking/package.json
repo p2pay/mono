@@ -1,0 +1,14 @@
+{
+  "name": "@p2payto/booking-flow",
+  "version": "0.0.1",
+  "author": "p2pay",
+  "license": "MIT",
+  "type": "module",
+  "main": "./module.js",
+  "exports": {
+    ".": "./module.js"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^4.0.0"
+  }
+}
