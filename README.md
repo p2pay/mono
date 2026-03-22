@@ -7,7 +7,6 @@ This workspace contains:
 - `rails/template` — Nuxt module (rail template): exposes an API endpoint and injects a page.
 - `rails/peach` — Nuxt module (Peach rail): exposes an API endpoint and injects a page.
 - `flows/booking` - Nuxt module with the booking view on calendar.
-- Empty placeholders: `flows/`, `utils/`, `apps/`
 
 ## Quick start
 
