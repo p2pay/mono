@@ -6,10 +6,11 @@ Each rail is a Nuxt 4 module (`defineNuxtModule`) that injects exactly one page 
 
 ## Available rails
 
-| Package | Page | API |
-|---------|------|-----|
-| `@p2payto/template` | `/rails/template` | `/api/rails/template` |
-| `@p2payto/peach` | `/rails/peach` | `/api/rails/peach` |
+| Package | Page | API | Description |
+|---------|------|-----|-------------|
+| `@p2payto/template` | `/rails/template` | `/api/rails/template` | Reference rail — copy this to scaffold a new rail |
+| `@p2payto/peach` | `/rails/peach` | `/api/rails/peach` | [Peach](https://peachbitcoin.com) P2P Bitcoin rail |
+| `@p2payto/robosats` | `/rails/robosats` | `/api/rails/robosats/*` | [RoboSats](https://robosats.com) P2P Bitcoin rail — client-side identity (token, PGP, Nostr) + server-side Tor proxy to coordinator onion |
 
 ## Adding a new rail
 

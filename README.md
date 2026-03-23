@@ -49,6 +49,7 @@ Rails are pluggable payment-rail modules. Each one injects a page and a server A
 |---------|------|-----|-------------|
 | `@p2payto/template` (`rails/template`) | `/rails/template` | `/api/rails/template` | Reference rail — copy this to scaffold a new rail |
 | `@p2payto/peach` (`rails/peach`) | `/rails/peach` | `/api/rails/peach` | [Peach](https://peachbitcoin.com) P2P Bitcoin rail |
+| `@p2payto/robosats` (`rails/robosats`) | `/rails/robosats` | `/api/rails/robosats/*` | [RoboSats](https://robosats.com) P2P Bitcoin rail — client-side identity (token, PGP, Nostr) + server-side Tor proxy to coordinator onion |
 
 ## Flows
 
@@ -57,7 +58,6 @@ Flows are higher-level business-logic modules. They can include pages, component
 | Package | Page | Description |
 |---------|------|-------------|
 | `@p2payto/booking` (`flows/booking`) | `/flows/booking`, `/flows/booking/embed` | Booking/scheduling UI with calendar, time slots, extras, and embeddable iframe variant |
-| `@p2payto/robosats` (`flows/robosats`) | `/flows/robosats` | [RoboSats](https://robosats.com) P2P Bitcoin flow — client-side identity generation (token, PGP, Nostr) + server-side Tor proxy to the coordinator onion |
 
 ## Module anatomy
 
@@ -85,6 +85,14 @@ The host app needs only two changes to add a module:
 |----------|---------|---------|
 | `NUXT_TOR_SOCKS_URL` | `socks5h://127.0.0.1:9050` | `@p2payto/robosats` |
 | `NUXT_ROBOSATS_COORDINATOR_URL` | RoboSats onion address | `@p2payto/robosats` |
+| `NUXT_PEACH_BASE_URL` | `https://api.peachbitcoin.com` | `@p2payto/peach` |
+| `NUXT_PEACH_BITCOIN_MNEMONIC` | _(required)_ | `@p2payto/peach` |
+| `NUXT_PEACH_PGP_PRIVATE_KEY` | _(required)_ | `@p2payto/peach` |
+| `NUXT_PEACH_PGP_PUBLIC_KEY` | _(required)_ | `@p2payto/peach` |
+| `NUXT_PEACH_PGP_PASSPHRASE` | _(required)_ | `@p2payto/peach` |
+| `NUXT_PEACH_REFERRAL_CODE` | _(empty)_ | `@p2payto/peach` |
+| `NUXT_PEACH_FEE_RATE` | `hourFee` | `@p2payto/peach` |
+| `NUXT_PEACH_MAX_PREMIUM` | `0` | `@p2payto/peach` |
 
 ## License
 

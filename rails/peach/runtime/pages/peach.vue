@@ -1,11 +1,15 @@
 <template>
   <main style="padding: 24px; font-family: ui-sans-serif, system-ui;">
-    <h1>@p2payto/peach injected rail page</h1>
-    <p>API says: <strong>{{ data?.message }}</strong></p>
-    <p><small>Source: <code>/api/rails/peach</code></small></p>
+    <h1>@p2payto/peach rail</h1>
+    <p v-if="pending">Loading merchant account…</p>
+    <p v-else-if="error">Error: {{ error.message }}</p>
+    <template v-else>
+      <p>Peach account: <code>{{ me?.id }}</code></p>
+    </template>
   </main>
 </template>
 
 <script setup>
-const { data } = await useFetch('/api/rails/peach')
+const { getMe } = usePeach()
+const { data: me, pending, error } = await useAsyncData('peach-me', getMe)
 </script>

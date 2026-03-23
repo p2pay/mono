@@ -9,7 +9,6 @@ Flows are richer than rails: they can ship pages, embeddable components, composa
 | Package | Page(s) | Description |
 |---------|---------|-------------|
 | `@p2payto/booking` | `/flows/booking`, `/flows/booking/embed` | Booking/scheduling UI — calendar, time slots, optional extras, embeddable iframe variant with custom theming |
-| `@p2payto/robosats` | `/flows/robosats` | RoboSats P2P Bitcoin flow — client-side identity generation (token, PGP keypair, Nostr key) and server-side Tor SOCKS proxy to the coordinator onion |
 
 ## Adding a new flow
 
