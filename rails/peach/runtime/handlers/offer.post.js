@@ -31,18 +31,17 @@ export default defineEventHandler(async (event) => {
   const paymentData = { [method]: { hashes: [paymentDataHash] } }
   const sats = parseInt(parseFloat(amount) * 100_000_000)
 
-  const { id: offerId } = await peachFetch('/v1/offer', {
+  const { id: offerId } = await peachFetch('/v069/buyOffer/', {
     baseUrl: config.peachBaseUrl,
     token,
     method: 'POST',
     body: {
-      type: 'bid',
-      amount: [sats, sats],
-      maxPremium: Number(config.peachMaxPremium),
+      amount: sats,
+      premium: Number(config.peachMaxPremium),
       meansOfPayment,
       paymentData,
-      releaseAddress,
-      messageSignature,
+      releaseAddresses: [releaseAddress],
+      releaseAddressMessageSignatures: [messageSignature],
     },
   })
 
