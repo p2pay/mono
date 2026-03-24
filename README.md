@@ -22,7 +22,7 @@ mono/
 - `rails/peach` — Nuxt module (Peach rail): exposes an API endpoint and injects a page.
 - `flows/booking` - Nuxt module with the booking view on calendar.
 
-## Quick startFapps
+## Quick start
 
 ```bash
 npx pnpm install
