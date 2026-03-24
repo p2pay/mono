@@ -28,7 +28,6 @@ export default defineNuxtModule({
     peachPgpPrivateKey: undefined,
     peachPgpPublicKey: undefined,
     peachPgpPassphrase: undefined,
-    peachPaymentDetails: undefined,
     peachReferralCode: undefined,
     peachFeeRate: undefined,
     peachMaxPremium: undefined,
@@ -50,10 +49,6 @@ export default defineNuxtModule({
       options.peachPgpPublicKey ?? nuxt.options.runtimeConfig.peachPgpPublicKey ?? ''
     nuxt.options.runtimeConfig.peachPgpPassphrase =
       options.peachPgpPassphrase ?? nuxt.options.runtimeConfig.peachPgpPassphrase ?? ''
-    // JSON string of fiat payment details shared with sellers upon trade acceptance
-    // e.g. '{"type":"sepa","beneficiary":"John Doe","iban":"DE89...","bic":"COBADEFFXXX"}'
-    nuxt.options.runtimeConfig.peachPaymentDetails =
-      options.peachPaymentDetails ?? nuxt.options.runtimeConfig.peachPaymentDetails ?? '{}'
     nuxt.options.runtimeConfig.peachReferralCode =
       options.peachReferralCode ?? nuxt.options.runtimeConfig.peachReferralCode ?? ''
     nuxt.options.runtimeConfig.peachFeeRate =

@@ -5,7 +5,8 @@ import { getPaymentDataHashes } from '../lib/getPaymentDataHashes.js'
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
-  const { currency, method, amount } = await readBody(event)
+  // paymentDetails: payer's payment identifier object (e.g. { iban: '...' } for SEPA)
+  const { currency, method, amount, paymentDetails } = await readBody(event)
 
   const token = await getAccessToken(config)
 
@@ -22,9 +23,8 @@ export default defineEventHandler(async (event) => {
     peachId
   )
 
-  // Hash the real payment identifier (IBAN, phone, etc.) from merchant payment details.
+  // Hash the payer's payment identifier (IBAN, phone, etc.).
   // Peach uses these hashes to privately match buyers and sellers without exposing raw data.
-  const paymentDetails = JSON.parse(config.peachPaymentDetails || '{}')
   const hashes = getPaymentDataHashes(method, paymentDetails)
 
   const meansOfPayment = { [currency]: [method] }

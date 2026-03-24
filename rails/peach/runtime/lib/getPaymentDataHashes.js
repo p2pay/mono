@@ -23,10 +23,10 @@ const IDENTIFIER_FIELDS = {
   AMAZON_GIFT_CARD: ['code'],
 }
 
-const sha256 = (value) => createHash('sha256').update(String(value)).digest('hex')
+const sha256 = (value) => createHash('sha256').update(String(value).toLowerCase()).digest('hex')
 
 // Returns an array of hashes of the identifying fields for the given payment method.
-// details is the parsed object from NUXT_PEACH_PAYMENT_DETAILS.
+// details is an object with the payer's payment identifiers (e.g. { iban: '...' }).
 // Throws if no identifier fields are found (prevents posting a broken offer).
 export const getPaymentDataHashes = (method, details) => {
   const fields = IDENTIFIER_FIELDS[method.toUpperCase()]
