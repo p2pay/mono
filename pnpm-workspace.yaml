@@ -4,3 +4,4 @@ packages:
   - "rails/*"
   - "flows/*"
   - "utils/*"
+  - "services/*"
