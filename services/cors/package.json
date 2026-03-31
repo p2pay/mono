@@ -1,0 +1,35 @@
+{
+  "name": "@p2payto/cors",
+  "version": "0.1.0",
+  "author": "Learntheropes <giovanni@learntheropes.xyz>",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "files": [
+    "runtime",
+    "module",
+    "nitro.config.*",
+    "server",
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./module/module.js"
+    }
+  },
+  "scripts": {
+    "dev": "nitro dev",
+    "build": "nitro build --preset cloudflare-module",
+    "start": "node .output/server/index.mjs",
+    "build:cf": "nitro build --preset cloudflare-module",
+    "dev:cf": "npm run build:cf && wrangler dev .output/server/index.mjs --assets .output/public --compatibility-flag nodejs_compat",
+    "deploy:cf": "npm run build:cf && wrangler deploy .output/server/index.mjs --assets .output/public --name cors-proxy --keep-vars --compatibility-date 2026-02-10 --compatibility-flag nodejs_compat"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.13.0",
+    "nitropack": "latest"
+  },
+  "devDependencies": {
+    "wrangler": "^4.64.0"
+  }
+}
