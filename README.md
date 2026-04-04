@@ -106,30 +106,30 @@ The host app needs only two changes to add a module:
 
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
-| `MARKET_TOR_PROXY_SECRET` | yes | — | Auth secret for the inline `/api/market/tor-proxy` handler |
-| `MARKET_ROBOSATS_COORDINATOR_ONION_URL` | no | RoboSats default onion | RoboSats coordinator onion address |
-| `MARKET_TOR_SOCKS_URL` | no | `socks5h://127.0.0.1:9050` | SOCKS5h URL of the local Tor daemon |
+| `NUXT_TOR_PROXY_SECRET` | yes | — | Auth secret for the inline `/api/market/tor-proxy` handler |
+| `NUXT_ROBOSATS_COORDINATOR_ONION_URL` | no | RoboSats default onion | RoboSats coordinator onion address |
+| `NUXT_TOR_SOCKS_URL` | no | `socks5h://127.0.0.1:9050` | SOCKS5h URL of the local Tor daemon |
 
 ### `rails/robosats`
 
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
-| `ROBOSATS_COORDINATOR_URL` | no | RoboSats default onion | Coordinator onion base URL |
-| `TOR_PROXY_SECRET` | yes | — | Shared secret for the embedded `@p2pay/tor` proxy |
-| `TOR_SOCKS_URL` | no | `socks5h://127.0.0.1:9050` | SOCKS5h URL of the local Tor daemon |
+| `NUXT_ROBOSATS_COORDINATOR_URL` | no | RoboSats default onion | Coordinator onion base URL |
+| `NUXT_TOR_PROXY_SECRET` | yes | — | Shared secret for the embedded `@p2pay/tor` proxy |
+| `NUXT_TOR_SOCKS_URL` | no | `socks5h://127.0.0.1:9050` | SOCKS5h URL of the local Tor daemon |
 
 ### `rails/peach`
 
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
-| `PEACH_BASE_URL` | no | `https://api.peachbitcoin.com` | Peach API base URL |
-| `PEACH_BITCOIN_MNEMONIC` | yes | — | BIP39 mnemonic for wallet key derivation |
-| `PEACH_PGP_PRIVATE_KEY` | yes | — | Armored PGP private key |
-| `PEACH_PGP_PUBLIC_KEY` | yes | — | Armored PGP public key |
-| `PEACH_PGP_PASSPHRASE` | yes | — | PGP key passphrase |
-| `PEACH_REFERRAL_CODE` | no | — | Peach referral code |
-| `PEACH_FEE_RATE` | no | `hourFee` | Bitcoin fee rate strategy |
-| `PEACH_MAX_PREMIUM` | no | `0` | Maximum accepted offer premium |
+| `NUXT_PEACH_BASE_URL` | no | `https://api.peachbitcoin.com` | Peach API base URL |
+| `NUXT_PEACH_BITCOIN_MNEMONIC` | yes | — | BIP39 mnemonic for wallet key derivation |
+| `NUXT_PEACH_PGP_PRIVATE_KEY` | yes | — | Armored PGP private key |
+| `NUXT_PEACH_PGP_PUBLIC_KEY` | yes | — | Armored PGP public key |
+| `NUXT_PEACH_PGP_PASSPHRASE` | yes | — | PGP key passphrase |
+| `NUXT_PEACH_REFERRAL_CODE` | no | — | Peach referral code |
+| `NUXT_PEACH_FEE_RATE` | no | `hourFee` | Bitcoin fee rate strategy |
+| `NUXT_PEACH_MAX_PREMIUM` | no | `0` | Maximum accepted offer premium |
 
 ## License
 

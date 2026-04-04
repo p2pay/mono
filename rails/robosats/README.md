@@ -19,9 +19,9 @@ The tor proxy is available at `/api/tor/**` for client-side use.
 
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
-| `ROBOSATS_COORDINATOR_URL` | no | RoboSats default onion | Coordinator onion base URL |
-| `TOR_PROXY_SECRET` | yes | — | Shared secret for the `@p2pay/tor` proxy |
-| `TOR_SOCKS_URL` | no | `socks5h://127.0.0.1:9050` | SOCKS5h URL of the local Tor daemon |
+| `NUXT_ROBOSATS_COORDINATOR_URL` | no | RoboSats default onion | Coordinator onion base URL |
+| `NUXT_TOR_PROXY_SECRET` | yes | — | Shared secret for the `@p2pay/tor` proxy |
+| `NUXT_TOR_SOCKS_URL` | no | `socks5h://127.0.0.1:9050` | SOCKS5h URL of the local Tor daemon |
 
 A running Tor daemon is required on the server.
 
@@ -40,8 +40,8 @@ export default defineNuxtConfig({
   modules: ['@p2pay/robosats'],
   p2payRobosatsRail: {
     enabled: true,
-    torProxySecret: process.env.TOR_PROXY_SECRET,
-    robosatsCoordinatorUrl: process.env.ROBOSATS_COORDINATOR_URL
+    torProxySecret: process.env.NUXT_TOR_PROXY_SECRET,
+    robosatsCoordinatorUrl: process.env.NUXT_ROBOSATS_COORDINATOR_URL
   }
 })
 ```

@@ -17,14 +17,14 @@ Dual-mode module for the [Peach](https://peachbitcoin.com) P2P Bitcoin rail. Han
 
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
-| `PEACH_BASE_URL` | no | `https://api.peachbitcoin.com` | Peach API base URL |
-| `PEACH_BITCOIN_MNEMONIC` | yes | — | BIP39 mnemonic for wallet key derivation |
-| `PEACH_PGP_PRIVATE_KEY` | yes | — | Armored PGP private key |
-| `PEACH_PGP_PUBLIC_KEY` | yes | — | Armored PGP public key |
-| `PEACH_PGP_PASSPHRASE` | yes | — | PGP key passphrase |
-| `PEACH_REFERRAL_CODE` | no | — | Peach referral code |
-| `PEACH_FEE_RATE` | no | `hourFee` | Bitcoin fee rate strategy |
-| `PEACH_MAX_PREMIUM` | no | `0` | Maximum accepted offer premium |
+| `NUXT_PEACH_BASE_URL` | no | `https://api.peachbitcoin.com` | Peach API base URL |
+| `NUXT_PEACH_BITCOIN_MNEMONIC` | yes | — | BIP39 mnemonic for wallet key derivation |
+| `NUXT_PEACH_PGP_PRIVATE_KEY` | yes | — | Armored PGP private key |
+| `NUXT_PEACH_PGP_PUBLIC_KEY` | yes | — | Armored PGP public key |
+| `NUXT_PEACH_PGP_PASSPHRASE` | yes | — | PGP key passphrase |
+| `NUXT_PEACH_REFERRAL_CODE` | no | — | Peach referral code |
+| `NUXT_PEACH_FEE_RATE` | no | `hourFee` | Bitcoin fee rate strategy |
+| `NUXT_PEACH_MAX_PREMIUM` | no | `0` | Maximum accepted offer premium |
 
 ## Module mode (Nuxt app)
 
@@ -45,7 +45,7 @@ export default defineNuxtConfig({
 })
 ```
 
-Env vars are picked up automatically as `NUXT_PEACH_*` by Nuxt's runtimeConfig resolution.
+Env vars follow the `NUXT_*` naming convention for Nuxt's runtimeConfig auto-resolution.
 
 ## Standalone mode (Nitro)
 

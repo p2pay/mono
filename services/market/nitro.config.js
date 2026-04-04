@@ -7,9 +7,9 @@ export default defineNitroConfig({
   compatibilityDate: '2026-04-03',
 
   runtimeConfig: {
-    torProxySecret: process.env.MARKET_TOR_PROXY_SECRET,
-    robosatsCoordinatorOnionUrl: process.env.MARKET_ROBOSATS_COORDINATOR_ONION_URL,
-    torSocksUrl: process.env.MARKET_TOR_SOCKS_URL || 'socks5h://127.0.0.1:9050'
+    torProxySecret: process.env.NUXT_TOR_PROXY_SECRET,
+    robosatsCoordinatorOnionUrl: process.env.NUXT_ROBOSATS_COORDINATOR_ONION_URL,
+    torSocksUrl: process.env.NUXT_TOR_SOCKS_URL || 'socks5h://127.0.0.1:9050'
   },
 
   handlers: [
