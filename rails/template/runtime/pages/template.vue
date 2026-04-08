@@ -1,6 +1,6 @@
 <template>
   <main style="padding: 24px; font-family: ui-sans-serif, system-ui;">
-    <h1>@p2payto/template injected rail page</h1>
+    <h1>@p2payments/template injected rail page</h1>
     <p>API says: <strong>{{ data?.message }}</strong></p>
     <p><small>Source: <code>/api/rails/template</code></small></p>
   </main>

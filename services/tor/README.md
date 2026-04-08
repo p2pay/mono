@@ -1,4 +1,4 @@
-# @p2payto/tor
+# @p2payments/tor
 
 Generic Tor reverse proxy. Forwards HTTP requests to any `.onion` address via a local Tor daemon (SOCKS5h). Ships in dual mode: standalone Nitro app or Nuxt module.
 
@@ -31,19 +31,12 @@ pnpm build
 pnpm start
 ```
 
-Docker:
-
-```bash
-docker build -t p2pay-tor .
-docker run --network=host -e NUXT_TOR_PROXY_SECRET=... p2pay-tor
-```
-
 ## Module mode
 
 ```js
 // nuxt.config.js
 export default defineNuxtConfig({
-  modules: ['@p2payto/tor'],
+  modules: ['@p2payments/tor'],
   tor: {
     enabled: true,
     torProxySecret: process.env.NUXT_TOR_PROXY_SECRET
@@ -51,7 +44,7 @@ export default defineNuxtConfig({
 })
 ```
 
-Add `"@p2payto/tor": "workspace:*"` to the app's `package.json` dependencies.
+Add `"@p2payments/tor": "workspace:*"` to the app's `package.json` dependencies.
 
 ## Request format
 

@@ -1,6 +1,7 @@
 {
-  "name": "@p2payto/mono",
-  "author": "p2pay",
+  "name": "@p2payments/mono",
+  "version": "0.1.0",
+  "author": "p2payments",
   "license": "MIT",
   "private": true,
   "type": "module",
@@ -13,10 +14,10 @@
   "dependencies": {
     "nuxt": "^4.0.0",
     "@nuxt/ui": "^3.0.0",
-    "@p2payto/template": "workspace:*",
-    "@p2payto/peach": "workspace:*",
-    "@p2payto/booking": "workspace:*",
-    "@p2payto/robosats": "workspace:*",
-    "@p2payto/tor": "workspace:*"
+    "@p2payments/template": "workspace:*",
+    "@p2payments/peach": "workspace:*",
+    "@p2payments/booking": "workspace:*",
+    "@p2payments/robosats": "workspace:*",
+    "@p2payments/tor": "workspace:*"
   }
 }

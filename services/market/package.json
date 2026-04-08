@@ -1,7 +1,7 @@
 {
-  "name": "@p2payto/market",
+  "name": "@p2payments/market",
   "version": "0.1.0",
-  "author": "Learntheropes <giovanni@learntheropes.xyz>",
+  "author": "p2payments & learntheropes",
   "license": "MIT",
   "type": "module",
   "private": true,

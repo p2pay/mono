@@ -5,7 +5,7 @@ const toBoolean = (v) => String(v || '').toLowerCase() === 'true'
 
 export default defineNuxtModule({
   meta: {
-    name: '@p2payto/robosats',
+    name: '@p2payments/robosats',
     configKey: 'p2payRobosatsRail'
   },
 
@@ -35,7 +35,7 @@ export default defineNuxtModule({
       '/api/tor'
 
     // Install services/tor as a Nuxt module
-    await installModule('@p2payto/tor', {
+    await installModule('@p2payments/tor', {
       enabled: true,
       prefix: options.torPrefix || '/api/tor',
       torProxySecret: options.torProxySecret,

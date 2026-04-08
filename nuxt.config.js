@@ -1,9 +1,9 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
-    '@p2payto/template',
-    '@p2payto/peach',
-    '@p2payto/booking',
-    '@p2payto/robosats'
+    '@p2payments/template',
+    '@p2payments/peach',
+    '@p2payments/booking',
+    '@p2payments/robosats'
   ]
 })

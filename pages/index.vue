@@ -1,6 +1,6 @@
 <template>
   <main style="padding: 24px; font-family: ui-sans-serif, system-ui;">
-    <h1>@p2payto/mono</h1>
+    <h1>@p2payments/mono</h1>
 
     <p>Root API says: <strong>{{ data?.message }}</strong></p>
 

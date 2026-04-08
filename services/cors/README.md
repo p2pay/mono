@@ -1,4 +1,4 @@
-# @p2payto/cors
+# @p2payments/cors
 
 CORS reverse proxy service. Proxies a configured target API, adding CORS headers and validating requests with a shared secret. Ships in dual mode: standalone Nitro app (Cloudflare Workers) or Nuxt module.
 
@@ -33,7 +33,7 @@ pnpm deploy   # Cloudflare Workers via wrangler
 ```js
 // nuxt.config.js
 export default defineNuxtConfig({
-  modules: ['@p2payto/cors'],
+  modules: ['@p2payments/cors'],
   corsProxy: {
     enabled: true,
     corsTargetUrl: 'https://api.peachbitcoin.com',
@@ -42,4 +42,4 @@ export default defineNuxtConfig({
 })
 ```
 
-Add `"@p2payto/cors": "workspace:*"` to the app's `package.json` dependencies.
+Add `"@p2payments/cors": "workspace:*"` to the app's `package.json` dependencies.

@@ -5,7 +5,7 @@ const toBoolean = (v) => String(v || '').toLowerCase() === 'true'
 
 export default defineNuxtModule({
   meta: {
-    name: '@p2payto/peach',
+    name: '@p2payments/peach',
     configKey: 'p2payPeachRail'
   },
 

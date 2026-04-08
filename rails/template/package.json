@@ -1,7 +1,7 @@
 {
-  "name": "@p2payto/template",
-  "version": "0.0.1",
-  "author": "p2pay",
+  "name": "@p2payments/template",
+  "version": "0.1.0",
+  "author": "p2payments & learntheropes",
   "license": "MIT",
   "type": "module",
   "main": "./module.js",
