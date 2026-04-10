@@ -1,3 +1,5 @@
+[Español](README.es.md) | [Português](README.pt.md) | [Русский](README.ru.md) | [Français](README.fr.md) | [Italiano](README.it.md)
+
 # p2payments/mono
 
 `mono` is the orchestrator repo for [P2Payments](https://github.com/P2Payments). It assembles payment rails, business flows, and support services into a single Nuxt-based workspace.
