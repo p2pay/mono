@@ -1,3 +1,5 @@
+[Español](README.es.md) | [Português](README.pt.md) | [Русский](README.ru.md) | [Français](README.fr.md) | [Italiano](README.it.md)
+
 # p2pagos/mono
 
 `mono` is the orchestrator repo for [P2Pagos](https://p2pagos.com). It assembles payment rails, business flows, and support services into a single Nuxt-based workspace.
@@ -112,3 +114,5 @@ The root Nuxt app (`nuxt.config.js`) lists workspace modules in the `modules` ar
 ## Known issues
 
 - `@nuxt/kit` version mismatch: `rails/peach`, `rails/robosats`, and `services/tor` declare `@nuxt/kit ^3.13.0` while the root app and `rails/template`, `flows/booking` use `^4.0.0`. The modules work in module mode via Nuxt's own kit instance, but full standalone migration to `^4.0.0` is pending.
+
+### Repo inspired by [**BitPagos**](https://web.archive.org/web/20141225131358/https://www.bitpagos.com/es/)
